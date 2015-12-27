@@ -1,3 +1,5 @@
 NAME-CLOUD
+
 This Python script generates a name cloud for your name.
+
 Requires word_cloud module.https://github.com/amueller/word_cloud.
