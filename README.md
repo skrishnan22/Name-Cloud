@@ -1,4 +1,4 @@
-NAME-CLOUD
+# NAME-CLOUD
 
 This Python script generates a name cloud for your name similar to the sample image in this repo.
 
