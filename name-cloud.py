@@ -4,56 +4,55 @@ from scipy.misc import imread
 import numpy as np
 from PIL import Image
 
-text=[]
-inp=raw_input("Enter Name:")
-l=len(inp)
-inp=inp.upper()
+text = []
+inp = raw_input("Enter Name:")
+l = len(inp)
+inp = inp.upper()
 
-
-base=Image.new("RGB",(l*900,1000))
+base = Image.new("RGB",(l*900,1000))
 for i in range (1,100):
     text.append([inp,i])
-x=0
-y=0
+x = 0
+y = 0
 for i in range(0,l):
-    if inp[i]=='A':
-        a_mask=np.array(Image.open("Alphabets/A.png"))
-        a= WordCloud(mask=a_mask,width=50,height=50).generate_from_frequencies(text).to_image()
+    if inp[i] == 'A':
+        a_mask = np.array(Image.open("Alphabets/A.png"))
+        a = WordCloud(mask = a_mask, width = 50, height = 50).generate_from_frequencies(text).to_image()
         base.paste(a,(x,y))
         x+=900
         
-    elif inp[i]=='B':    
-        b_mask=np.array(Image.open("Alphabets/B.png"))
-        b= WordCloud(mask=b_mask,width=40,height=40).generate_from_frequencies(text).to_image()
+    elif inp[i] == 'B':    
+        b_mask = np.array(Image.open("Alphabets/B.png"))
+        b = WordCloud(mask = b_mask, width = 40, height = 40).generate_from_frequencies(text).to_image()
         base.paste(b,(x,y))
         x+=900
         
-    elif inp[i]=='C':
-        c_mask=np.array(Image.open("Alphabets/C.png"))
-        c=WordCloud(mask=c_mask,width=30,height=30).generate_from_frequencies(text).to_image()
+    elif inp[i] == 'C':
+        c_mask = np.array(Image.open("Alphabets/C.png"))
+        c = WordCloud(mask = c_mask, width = 30, height = 30).generate_from_frequencies(text).to_image()
         base.paste(c,(x,y))
         x+=900
        
-    elif inp[i]=='D':
-        d_mask=np.array(Image.open("Alphabets/D.png"))
-        d= WordCloud(mask=d_mask,width=50,height=50).generate_from_frequencies(text).to_image()
+    elif inp[i] == 'D':
+        d_mask = np.array(Image.open("Alphabets/D.png"))
+        d = WordCloud(mask = d_mask, width = 50, height = 50).generate_from_frequencies(text).to_image()
         base.paste(a,(x,y))
         x+=900
         
-    elif inp[i]=='E':
-        e_mask=np.array(Image.open("Alphabets/E.png"))
-        e= WordCloud(mask=e_mask,width=50,height=50).generate_from_frequencies(text).to_image()
+    elif inp[i] == 'E':
+        e_mask = np.array(Image.open("Alphabets/E.png"))
+        e = WordCloud(mask = e_mask, width = 50, height = 50).generate_from_frequencies(text).to_image()
         base.paste(e,(x,y))
         x+=900
        
-    elif inp[i]=='F':    
-        f_mask=np.array(Image.open("Alphabets/F.png"))
-        f= WordCloud(mask=f_mask,width=50,height=50).generate_from_frequencies(text).to_image()
+    elif inp[i] == 'F':    
+        f_mask = np.array(Image.open("Alphabets/F.png"))
+        f = WordCloud(mask = f_mask, width = 50, height = 50).generate_from_frequencies(text).to_image()
         base.paste(f,(x,y))
         x+=900
-    elif inp[i]=='G':
-        g_mask=np.array(Image.open("Alphabets/G.png"))
-        g= WordCloud(mask=g_mask,width=50,height=50).generate_from_frequencies(text).to_image()
+    elif inp[i] == 'G':
+        g_mask = np.array(Image.open("Alphabets/G.png"))
+        g = WordCloud(mask = g_mask, width = 50, height = 50).generate_from_frequencies(text).to_image()
         base.paste(g,(x,y))
         x+=900
         
